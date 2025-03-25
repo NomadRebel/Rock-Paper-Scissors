@@ -1,6 +1,5 @@
 console.log('Hello World');
-//let's get this started again...
-// First,i need to make a function that generates random output and convert it into rock paper and scissors
+// function that generates random values
 function getComputerChoice(){
   let a = Math.floor(Math.random() * 3);
   if (a===0){
@@ -14,17 +13,17 @@ function getComputerChoice(){
   }  
 }
 console.log(getComputerChoice());
-//for this math.random can help me and then by conditionals i can convert it into the desired output 
-//then i need to take the user's input and make it case insensitive.
+
+//function to take user input
 function getHumanChoice(){
   return (prompt("rock,paper,scissors?", '')).toLowerCase();
 }
 console.log(getHumanChoice());
-// then i need to declare score variable
+//score variable
   let humanScore = 0;
   let computerScore = 0;
 
-  //after that i need to make the function that can analyze the human input and computer's choice and declare the result
+  //function that compares user's input and computer choice to give the desired result
   function playRound(humanChoice, computerChoice){
     if(humanChoice===computerChoice){
       console.log('this is a draw');
@@ -36,15 +35,12 @@ console.log(getHumanChoice());
             humanChoice==="scissors" && computerChoice==="paper"){
               console.log("you win");
               humanScore++;
-
-        return "you win";
-            
+              return "you win";
     }
     else{
       console.log("you lose");
       computerScore++;
       return "you lose";
-
     }
 
   }
@@ -54,4 +50,4 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
-// and i need to play this game five times
+
