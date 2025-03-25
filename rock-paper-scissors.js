@@ -35,16 +35,22 @@ console.log(getHumanChoice());
             humanChoice==="scissors" && computerChoice==="paper"){
               console.log("you win");
               humanScore++;
-              return "you win";
+              console.log(humanScore);
+              return "win";
+    }
+    else if (computerChoice==="paper" && humanChoice==="rock" ||
+      computerChoice==="rock" && humanChoice==="scissors" ||
+      computerChoice==="scissors" && humanChoice==="paper"){
+        console.log("you lose");
+      computerScore++;
+      console.log(computerScore);
+      return "lose";
     }
     else{
-      console.log("you lose");
-      computerScore++;
-      return "you lose";
-    }
-
+      console.log("please input something");
+      return "blank";
   }
-
+  }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
