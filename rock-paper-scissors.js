@@ -35,6 +35,7 @@ console.log(getHumanChoice());
             humanChoice==="scissors" && computerChoice==="paper"){
               console.log("you win");
               humanScore++;
+              console.log("human Score");
               console.log(humanScore);
               return "win";
     }
@@ -43,6 +44,7 @@ console.log(getHumanChoice());
       computerChoice==="scissors" && humanChoice==="paper"){
         console.log("you lose");
       computerScore++;
+      console.log("computer score");
       console.log(computerScore);
       return "lose";
     }
