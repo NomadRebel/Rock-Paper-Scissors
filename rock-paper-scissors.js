@@ -8,7 +8,7 @@ function getComputerChoice(){
   else if (a===1){
     return "paper";
   }
-  else{
+  else if (a===2){
     return "scissors";
   }  
 }
@@ -25,32 +25,17 @@ console.log(getHumanChoice());
 
   //function that compares user's input and computer choice to give the desired result
   function playRound(humanChoice, computerChoice){
-    if(humanChoice===computerChoice){
-      console.log('this is a draw');
+    if(humanChoice === computerChoice){
       return "draw";
 
     }
-    else if (humanChoice==="paper" && computerChoice==="rock" ||
-            humanChoice==="rock" && computerChoice==="scissors" ||
-            humanChoice==="scissors" && computerChoice==="paper"){
-              console.log("you win");
-              humanScore++;
-              console.log("human Score");
-              console.log(humanScore);
+    else if ((humanChoice === "paper" && computerChoice==="rock") ||
+            (humanChoice === "rock" && computerChoice==="scissors") ||
+            (humanChoice === "scissors" && computerChoice==="paper")){
               return "win";
-    }
-    else if (computerChoice==="paper" && humanChoice==="rock" ||
-      computerChoice==="rock" && humanChoice==="scissors" ||
-      computerChoice==="scissors" && humanChoice==="paper"){
-        console.log("you lose");
-      computerScore++;
-      console.log("computer score");
-      console.log(computerScore);
-      return "lose";
-    }
+            }
     else{
-      console.log("please input something");
-      return "blank";
+      return "lose";
   }
   }
 
@@ -59,3 +44,5 @@ const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 
+
+console.log(playRound(humanSelection, computerSelection));
