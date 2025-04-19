@@ -1,16 +1,28 @@
 body{
-  background-color: blue;
+  background-color: beige;
   
 }
 .heading{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: yellow;
-  background-color: aqua;
+  color: red;
+  background-color: beige;
   font-size: 100px;
   border-color: black;
   border-width: 4px;
   border-style: solid;
   margin: 10px;
+  height: 100px;
+}
+#one{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+#imgRock, 
+#imgPaper,
+#imgScissors{
+  border-color: beige;
+  /* border-style: solid; */
 }

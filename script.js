@@ -89,8 +89,8 @@ const pTwo = document.createElement("p");
 
 
 // function for rock button when it is clicked
-const rock = document.querySelector("#rock");
-rock.addEventListener("click",function(){
+const rockImg = document.querySelector("#imgRock");
+rockImg.addEventListener("click",function(){
   let a = playRock(); 
   if(a==="win"){  // giving condition so it wil match the return value of playRock and increase the humanScore by 1.
     humanScore++;
@@ -117,7 +117,7 @@ rock.addEventListener("click",function(){
   pTwo.textContent = "Computer Score: " +computerScore + "/5";
   score.appendChild(pOne);
   score.appendChild(pTwo);
-  div.appendChild(score);
+  document.body.appendChild(score);
 });
 
 const paper = document.querySelector("#paper");
@@ -145,7 +145,34 @@ paper.addEventListener("click",function(){
   pTwo.textContent = "Computer Score: " +computerScore + "/5";
   score.appendChild(pOne);
   score.appendChild(pTwo);
-  div.appendChild(score);
+  document.body.appendChild(score);
+});
+const paperImg = document.querySelector("#imgPaper");
+paperImg.addEventListener("click",function(){
+  let a = playPaper();
+  if(a==="win"){
+    humanScore++;
+  }
+  else if(a==="draw"){
+     humanScore;
+     computerScore;
+  }
+  else {
+     computerScore++;
+  }
+  if(humanScore===5){
+    alert("you won");
+    location.reload();
+  }
+  else if(computerScore===5){
+    alert("you lost");
+    location.reload();
+  }
+  pOne.textContent = "Your Score: " + humanScore + "/5";
+  pTwo.textContent = "Computer Score: " +computerScore + "/5";
+  score.appendChild(pOne);
+  score.appendChild(pTwo);
+  document.body.appendChild(score);
 });
 
 const scissors = document.querySelector("#scissors");
@@ -175,5 +202,32 @@ scissors.addEventListener("click",function(){
   pTwo.textContent = "Computer Score: " + computerScore + "/5";
   score.appendChild(pOne);
   score.appendChild(pTwo);
-  div.appendChild(score);
+  document.body.appendChild(score);
+});
+const scissorsImg = document.querySelector("#imgScissors");
+scissorsImg.addEventListener("click",function(){
+  let a = playPaper();
+  if(a==="win"){
+    humanScore++;
+  }
+  else if(a==="draw"){
+     humanScore;
+     computerScore;
+  }
+  else {
+     computerScore++;
+  }
+  if(humanScore===5){
+    alert("you won");
+    location.reload();
+  }
+  else if(computerScore===5){
+    alert("you lost");
+    location.reload();
+  }
+  pOne.textContent = "Your Score: " + humanScore + "/5";
+  pTwo.textContent = "Computer Score: " +computerScore + "/5";
+  score.appendChild(pOne);
+  score.appendChild(pTwo);
+  document.body.appendChild(score);
 });
