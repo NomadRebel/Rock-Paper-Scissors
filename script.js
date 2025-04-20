@@ -78,14 +78,13 @@ function playScissors(){
 }
 
 // selecting div id = one from html
-const div = document.getElementById("one");
-
+const Yscre = document.getElementById("yourScre");
+const Cscre = document.getElementById("compScre")
 // creating new div with variable name score that will contain the score of the game
-const score = document.createElement("div");
 
 // paragraph that will go inside score and display the scores
-const pOne = document.createElement("p");
-const pTwo = document.createElement("p");
+const pOne = document.createElement("div");
+const pTwo = document.createElement("div");
 
 const rock = document.querySelector("#rock");
 rock.addEventListener("click",function(){
@@ -111,11 +110,11 @@ rock.addEventListener("click",function(){
   }
 
   // this will create new element in html and add the score variable 
-  pOne.textContent = "Your Score: " + humanScore + "/5";
-  pTwo.textContent = "Computer Score: " +computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
 // function for rock button when it is clicked
 const rockImg = document.querySelector("#imgRock");
@@ -142,11 +141,11 @@ rockImg.addEventListener("click",function(){
   }
 
   // this will create new element in html and add the score variable 
-  pOne.textContent = "Your Score: " + humanScore + "/5";
-  pTwo.textContent = "Computer Score: " +computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
 
 const paper = document.querySelector("#paper");
@@ -170,11 +169,11 @@ paper.addEventListener("click",function(){
     alert("you lost");
     location.reload();
   }
-  pOne.textContent = "Your Score: " + humanScore + "/5";
-  pTwo.textContent = "Computer Score: " +computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
 const paperImg = document.querySelector("#imgPaper");
 paperImg.addEventListener("click",function(){
@@ -197,11 +196,11 @@ paperImg.addEventListener("click",function(){
     alert("you lost");
     location.reload();
   }
-  pOne.textContent = "Your Score: " + humanScore + "/5";
-  pTwo.textContent = "Computer Score: " +computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
 
 const scissors = document.querySelector("#scissors");
@@ -227,11 +226,11 @@ scissors.addEventListener("click",function(){
     location.reload();
   }
 
-  pOne.textContent = "Your Score: " + humanScore +"/5";
-  pTwo.textContent = "Computer Score: " + computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
 const scissorsImg = document.querySelector("#imgScissors");
 scissorsImg.addEventListener("click",function(){
@@ -254,9 +253,9 @@ scissorsImg.addEventListener("click",function(){
     alert("you lost");
     location.reload();
   }
-  pOne.textContent = "Your Score: " + humanScore + "/5";
-  pTwo.textContent = "Computer Score: " +computerScore + "/5";
-  score.appendChild(pOne);
-  score.appendChild(pTwo);
-  document.body.appendChild(score);
+  pOne.textContent = humanScore + "/5";
+  pTwo.textContent = computerScore + "/5";
+  Yscre.appendChild(pOne);
+  Cscre.appendChild(pTwo);
+  
 });
