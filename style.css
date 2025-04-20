@@ -24,5 +24,31 @@ body{
 #imgPaper,
 #imgScissors{
   border-color: beige;
+  cursor: pointer;
   /* border-style: solid; */
+}
+#rock,
+#paper,
+#scissors{
+  background-color: rgb(209, 67, 67);
+  color: white;
+  font-size: large;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
+  width: 365px;
+  height: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition-duration: 180ms;
+}
+#rock:hover,
+#paper:hover,
+#scissors:hover{
+  background-color: rgb(255, 117, 117);
+}
+#rock:active,
+#paper:active,
+#scissors:active{
+  background-color: rgb(209, 67, 67);
 }

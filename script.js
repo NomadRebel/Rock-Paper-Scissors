@@ -87,7 +87,36 @@ const score = document.createElement("div");
 const pOne = document.createElement("p");
 const pTwo = document.createElement("p");
 
+const rock = document.querySelector("#rock");
+rock.addEventListener("click",function(){
+  let a = playRock(); 
+  if(a==="win"){  // giving condition so it wil match the return value of playRock and increase the humanScore by 1.
+    humanScore++;
+  }
+  else if(a==="draw"){
+     humanScore;
+     computerScore;
+  }
+  else {
+     computerScore++;
+  }
+  // checking condition if any of the players scores 5 then it will display the message and reload the page
+  if(humanScore===5){
+    alert("you won");
+    location.reload();
+  }
+  else if(computerScore===5){
+    alert("you lost");
+    location.reload();
+  }
 
+  // this will create new element in html and add the score variable 
+  pOne.textContent = "Your Score: " + humanScore + "/5";
+  pTwo.textContent = "Computer Score: " +computerScore + "/5";
+  score.appendChild(pOne);
+  score.appendChild(pTwo);
+  document.body.appendChild(score);
+});
 // function for rock button when it is clicked
 const rockImg = document.querySelector("#imgRock");
 rockImg.addEventListener("click",function(){
